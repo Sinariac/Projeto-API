@@ -4,20 +4,13 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class SalaCinema extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
+    
   }
   SalaCinema.init({
-    nome: DataTypes.STRING,
-    ativo: DataTypes.BOOLEAN,
-    email: DataTypes.STRING,
-    role: DataTypes.STRING
+    numero: DataTypes.INTEGER,
+    quantidade_assentos: DataTypes.INTEGER,
+    tem_3d: DataTypes.BOOLEAN,
+    tem_preferencial: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'SalaCinema',
