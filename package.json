@@ -1,0 +1,33 @@
+{
+  "name": "projetoapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./api/index.js",
+    "dev": "nodemon ./api/index.js",
+    "migrate": "npx sequelize-cli db:migrate",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sinariac/Projeto-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sinariac/Projeto-API/issues"
+  },
+  "homepage": "https://github.com/Sinariac/Projeto-API#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "path": "^0.12.7",
+    "sequelize": "^6.17.0",
+    "sequelize-cli": "^6.4.1",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
