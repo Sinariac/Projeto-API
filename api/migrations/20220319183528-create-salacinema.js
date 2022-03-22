@@ -2,23 +2,23 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('salacinemas', {
-      id: {
+      
+      numero: {
+        type: Sequelize.INTEGER,
+        primaryKey: true, 
         allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
       },
-      nome: {
-        type: Sequelize.STRING
+      quantidade_assentos: {
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
-      ativo: {
-        type: Sequelize.BOOLEAN
+      tem_3d: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false
       },
-      email: {
-        type: Sequelize.STRING
-      },
-      role: {
-        type: Sequelize.STRING
+      tem_preferencial: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
