@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
-  async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('salacinemas', {
+ up(queryInterface, Sequelize) {
+    return queryInterface.createTable('salacinemas', {
       
       numero: {
         type: Sequelize.INTEGER,
@@ -30,7 +30,7 @@ module.exports = {
       }
     });
   },
-  async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('salacinemas');
+  down(queryInterface, Sequelize) {
+    return queryInterface.dropTable('salacinemas');
   }
 };

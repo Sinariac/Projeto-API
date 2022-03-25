@@ -1,19 +1,21 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class SalaCinema extends Model {
-    
+const { Model, DataTypes } = require("sequelize");
+class SalaCinema extends Model {
+  static init(sequelize) {
+    super.init(
+      {
+        numero: {
+          type: DataTypes.INTEGER,
+          primaryKey: true
+        },
+        quantidade_assentos: DataTypes.INTEGER,
+        tem_3d: DataTypes.BOOLEAN,
+        tem_preferencial: DataTypes.BOOLEAN
+      },
+      {
+        sequelize,
+        modelName: "SalaCinema",
+      }
+    );
   }
-  SalaCinema.init({
-    numero: DataTypes.INTEGER,
-    quantidade_assentos: DataTypes.INTEGER,
-    tem_3d: DataTypes.BOOLEAN,
-    tem_preferencial: DataTypes.BOOLEAN
-  }, {
-    sequelize,
-    modelName: 'SalaCinema',
-  });
-  return SalaCinema;
-};
+}
+  module.exports = SalaCinema

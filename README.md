@@ -6,6 +6,14 @@
 <p> Projeto desenvolvido para conclusão do módulo 4 do curso de WebDev FullStack, da Resília Educação, onde foi criada uma API Rest para um cinema, utilizando JavaScript com Node.js, Express como framework e também o SqLite3 como banco relacional.
 </p>
 
+<h2>Ferramentas utilizadas:</h2>
+
+- [Node.js](https://nodejs.org/en/docs/)
+- [Express](https://expressjs.com/)
+- [Sequelize](https://sequelize.org/)
+- [SQLite](https://www.sqlite.org/docs.html)
+- [Insomnia para testar as rotas](https://docs.insomnia.rest/)
+
 <h2>Dependências utilizadas:</h2>
 
 ```js
@@ -17,7 +25,11 @@
     "sqlite3": "^5.0.2"
 }
 ```
+<h2> Comando para instalar as dependências :</h2>
 
+```js
+npm install
+```
 
 <h2>Comando para iniciar o terminal:</h2>
 
@@ -48,3 +60,4 @@ salaCinemaRouter.put("/sala-cinema/:numero", SalaCinemaController.atualizarSala)
 salaCinemaRouter.delete("/sala-cinema/:numero", SalaCinemaController.deletarSala);
 
 ```
+Feito com amor por Sinária Carvalho para o curso de WebDev da Resília Educação 💛
